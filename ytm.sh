@@ -29,7 +29,7 @@ ID="${ID:0:11}"
 
 #Getting data
 echo -e "${G}[+]${N} Getting video data...\n"
-title=$(curl -s "https://noembed.com/embed?url=https://www.youtube.com/watch?v=${ID}" | jq -r '.title')
+title=$(curl -s "https://noembed.com/embed?url=https://www.youtube.com/watch?v=$ID" | jq -r '.title')
 author=$(curl -s "https://noembed.com/embed?url=https://www.youtube.com/watch?v=$ID" | jq -r '.author_name')
 
 echo -e "${G}[+]${N} Title:  $title"
